@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+
+Route::group(['prefix' => 'posts'],function(){
+    Route::post('add',[PostController::class,'add']);
+    Route::post('update',[PostController::class,'update']);
+    Route::post('remove/{post_id}',[PostController::class,'remove']);
+    Route::get('/{post_id}',[PostController::class,'show']);
+    Route::get('',[PostController::class,'index']);
+    Route::post('/comment',[PostController::class,'addComment']);
 });
