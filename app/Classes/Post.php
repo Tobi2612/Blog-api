@@ -1,15 +1,15 @@
 <?php
 
-namespace app\Classes;
+namespace App\Classes;
 
 use App\Actions\AddPostAction;
-use app\Http\Requests\AddPostRequest;
-use app\Http\Requests\GetPostRequest;
-use app\Http\Requests\UpdatePostRequest;
-use app\Http\Requests\CommentRequest;
+use App\Http\Requests\AddPostRequest;
+use App\Http\Requests\GetPostRequest;
+use App\Http\Requests\UpdatePostRequest;
+use App\Http\Requests\CommentRequest;
 
-use app\Models\Post as ModelsPost;
-use app\Models\Comment;
+use App\Models\Post as ModelsPost;
+use App\Models\Comment;
 
 use Exception;
 use Illuminate\Contracts\Database\ModelIdentifier;
